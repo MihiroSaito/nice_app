@@ -1,0 +1,274 @@
+.form-box {
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  top: 150px;
+  overflow: scroll;
+
+  .articles {
+    background-color: rgba(255, 255, 255, 0.959);
+    height: 700px;
+    width: 87vw;
+    margin: auto;
+    border-radius: 5px;
+    border: 4px solid rgb(0, 162, 255);
+    position: relative;
+
+    .flash {
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 20px;
+      display: inline;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .title-box {
+      display: block;
+      margin-top: 50px;
+      position: absolute;
+      right: 50px;
+      left: 50px;
+      width: 80%;
+
+      .title {
+        width: 100%;
+        height: 60px;
+        border-radius: 10px;
+        border: 2px solid #333333;
+        outline: none;
+        font-size: 20px;
+        padding-left: 10px;
+      } 
+    }
+
+    .pic {
+      position: absolute;
+      top: 130px;
+      display: block;
+      height: 100px;
+      margin-left: 50px;
+      padding-top: 50px;
+      font-size: 15px;
+      outline: none;
+    
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .text-box {
+      position: absolute;
+      width: 83vw;
+      top: 270px;
+      padding-left: 55px;
+      max-height: 400px;
+
+      .bold, .italic, .heading-1, .quote, .code, .bullets, .numbers, .decrease, .increase, .block_tools{
+        display: none;
+      }
+
+      trix-editor {
+        max-height: 330px;
+        overflow: scroll;
+        border-radius: 5px;
+        background-color: white;
+        border: 2px solid #333333;
+        font-size: 20px;
+        padding-bottom: 10px;
+
+      }
+
+      #text {
+        width: 80vw;
+        height: 400px;
+        resize: none;
+        border-radius: 10px;
+        border: 2px solid #333333;
+        padding-top: 10px;
+        font-size: 20px;
+        padding-left: 10px;
+        outline: none;
+      }
+    }
+  }
+
+  .submit {
+    background-color: rgb(0, 162, 255);
+    height: 60px;
+    width: 500px;
+    border-radius: 30px;
+    margin-top: 40px;
+    margin-left: 450px;
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+  }
+
+  .submit:hover {
+    border: 3px solid rgb(194, 194, 194);
+    color: rgb(194, 194, 194);
+    background-color: rgb(0, 117, 212);
+  }
+
+  .submit:active {
+    opacity: 0.8;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 550px) {
+
+  .form-box {
+    height: 80%;
+    width: 100%;
+    max-width: 550px;
+    position: absolute;
+    top: 70px;
+    overflow: scroll;
+  
+    .articles {
+      background-color: rgba(255, 255, 255, 0.959);
+      height: 350px;
+      width: 87%;
+      margin: auto;
+      border-radius: 5px;
+      border: 2px solid rgb(0, 162, 255);
+      position: relative;
+  
+      .flash {
+        color: red;
+        font-weight: bold;
+        font-size: 10px;
+        margin-left: 5px;
+        display: inline;
+      }
+  
+      p {
+        font-size:  11px;
+        margin-bottom: 10px;
+      }
+  
+      .title-box {
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        left: 20px;
+        width: 89%;
+  
+        .title {
+          width: 100%;
+          height: 30px;
+          border-radius: 10px;
+          border: 1px solid #333333;
+          outline: none;
+          font-size: 20px;
+          padding-left: 10px;
+        } 
+      }
+  
+      .pic {
+        position: absolute;
+        top: 45px;
+        display: block;
+        margin-left: 20px;
+        font-size: 15px;
+        outline: none;
+        margin-top: -5px;
+        width: 89%;
+      
+        p {
+          margin-bottom: 10px;
+        }
+
+        .pic-box {
+          border: 1px solid #333333;
+          font-size: 10px;
+          border-radius: 8px;
+          color: rgb(138, 138, 138);
+          overflow: hidden;
+          padding-right: 10px;
+          width: 100%;
+        }
+      }
+  
+      .text-box {
+        position: absolute;
+        width: 83vw;
+        top: 150px;
+        padding-left: 20px;
+        max-height: 300px;
+
+        .strike, .link, .undo, .redo {
+          font-size: 10px;
+        }
+  
+        .bold, .italic, .heading-1, .quote, .code, .bullets, .numbers, .decrease, .increase, .block_tools{
+          display: none;
+        }
+  
+        trix-editor {
+          max-height: 120px;
+          overflow: scroll;
+          border-radius: 5px;
+          background-color: white;
+          border: 1px solid #333333;
+          font-size: 11px;
+          padding-bottom: 10px;
+          height: 120px;
+  
+        }
+  
+        #text {
+          width: 80vw;
+          height: 400px;
+          resize: none;
+          border-radius: 10px;
+          border: 2px solid #333333;
+          padding-top: 10px;
+          font-size: 10px;
+          padding-left: 10px;
+          outline: none;
+        }
+      }
+    }
+  
+    .submit {
+      background-color: rgb(0, 162, 255);
+      height: 30px;
+      width: 50%;
+      border-radius: 30px;
+      font-size: 10px;
+      color: white;
+      border: 1px solid white;
+      outline: none;
+      position: absolute;
+      margin: auto;
+      margin-top: 15px;
+      left: 100px;
+    }
+  
+    .submit:active {
+      border: 3px solid rgb(194, 194, 194);
+      color: rgb(194, 194, 194);
+      background-color: rgb(0, 117, 212);
+    }
+  }
+}
+

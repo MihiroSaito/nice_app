@@ -1,0 +1,38 @@
+<div class="update-user_form">
+  <div class="update-user_title">
+    <p>登録情報の更新<p>
+  </div>
+  <%= link_to "戻る", user_path(current_user) %>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
+    <div class="field">
+      <%= f.label :email %>(現在)<br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      新しい<%= f.label :password %> <i></i><em>(<%= @minimum_password_length %>文字以上)</em>
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <p>※更新を完了するために古いパスワードを入力してください。</p>
+      <%= f.password_field :current_password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="submit">
+      <div class="actions">
+        <%= f.submit "更新する"%>
+      </div>
+    </div>
+  <% end %>
+  <div class="delete-account">
+    <%= button_to "アカウントを削除", registration_path(resource_name), class: "delete-account_btn", data: { confirm: "本当に削除しますか？" }, method: :delete %>
+  </div>
+</div>

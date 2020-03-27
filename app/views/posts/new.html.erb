@@ -1,0 +1,25 @@
+<div class="form-box">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <div class="articles">
+      <div class="flash"><%= flash[:alert] %></div>
+      <div class="title-box">
+        <p>タイトル:</p>
+        <%= form.text_field :title, class: "title"%>
+      </div>
+      <div class="pic">
+        <p>サムネイル画像</p>
+        <%= form.file_field :image, class: "pic-box"%>
+      </div>
+      <div class="text-box">
+        <p>本文:</p>
+        <%= form.hidden_field :text, id: "text"%>
+        <trix-editor input="text"></trix-editor>
+      </div>
+    </div>
+    <%= form.submit "投稿する", class: "submit"%>
+  <% end%>
+</div>
+
+
+
+

@@ -1,0 +1,19 @@
+<div class="posts-box">
+  <div class="posted-title">
+    <h2>TITLE:</h2><%= @post.title %>
+  </div>
+  <% if user_signed_in? && current_user.id == @post.user_id %>
+    <%= link_to "編集", edit_post_path(@post.id), class: "edit-post" %>
+    <%= link_to "削除", post_path(@post.id), class: "delete-post", data: { confirm: "本当に削除しますか？" }, method: :delete %>
+  <% end %>
+  <div class="posted-pic">
+    <% if @post.image?%>
+      <%= image_tag @post.image.to_s %>
+    <% else %>
+      <%= image_tag "no_image.png"%>
+    <% end %>
+  </div>
+  <div class="posted-text">
+    <%= @post.text.html_safe %>
+  </div>
+</div>

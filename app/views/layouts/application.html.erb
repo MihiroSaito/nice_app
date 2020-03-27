@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Space blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "trix.css">
+    <script type = "text/javascript" src = "trix.js" ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <footer>
+        <p>© 2020 Space blog All rights reserved.</p>
+      </footer>
+      <header>
+        <div class="header__title">
+          <%=link_to "Space blog", root_path, class: "title"%>
+        </div>
+          <div class="account">
+          <% unless user_signed_in? %>
+            <%=link_to "ログイン", new_user_session_path, class: "account__log-in"%>
+            <%=link_to "新規登録", new_user_registration_path, class: "account__new"%>
+          <% else %>
+            <%= link_to current_user.nickname, user_path(current_user), class: "user-name"%> <p>様</p>
+            <%=link_to "ログアウト",  destroy_user_session_path, method: :delete, class: "account__new"%>
+          <% end %>
+          </div>
+      </header>
+      <% if user_signed_in? %>
+        <%=link_to root_path do %>
+          <div class="icon1">
+            <i class="fas fa-home"></i>
+          </div>
+        <% end %>
+        <% unless request.path.include?("new") %>
+          <%=link_to new_post_path do %>
+            <div class="icon2">
+              <i class="fas fa-plus"></i>
+            </div>
+          <% end %>
+        <% else %>
+        <% end %>
+      <% else %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
