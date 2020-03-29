@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "top_page#index"
   resources :posts, expect: :index
   resources :users, only: :show
+  get '*path', controller: 'application', action: 'render_404'
 end
