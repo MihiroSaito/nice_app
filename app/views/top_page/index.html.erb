@@ -3,7 +3,7 @@
     <%=link_to post_path(post) do%>
     <div class="posts">
       <% if post.image? %>
-        <%= image_tag post.image.to_s %>
+        <%# <%= image_tag post.image.to_s %> %>
       <% end %>
       <div class="author"><%= post.user.nickname%></div>
       <div class="title">
