@@ -22,7 +22,6 @@ body {
 
 
 .wrapper {
-  background-color: rgb(52, 207, 122);
   height: 150vh;
   width: 100vw;
   position: relative;
@@ -62,6 +61,7 @@ body {
         color: white;
         text-decoration: none;
         font-size: 16px;
+        font-family: sans-serif;
       }
       :hover {
         opacity: 0.7;
@@ -72,6 +72,7 @@ body {
         text-decoration: none;
         font-size: 16px;
         margin-left: 40px;
+        font-family: sans-serif;
       }
 
       :hover {
@@ -86,6 +87,7 @@ body {
         overflow: hidden;
         max-width: 200px;
         text-align: right;
+        font-family: sans-serif;
       }
       p {
         display: inline;
@@ -181,6 +183,7 @@ body {
         line-height: 30px;
         color: black;
         overflow: hidden;
+        font-family: sans-serif;
       }
     
       .title {
@@ -199,6 +202,7 @@ body {
           padding-left: 10px;
           word-break: break-all;
           color: black;
+          font-family: sans-serif;
 
           
         }
@@ -223,6 +227,7 @@ body {
     color: rgba(255, 255, 255, 0.438);
     text-align: center;
     line-height: 60px;
+    font-family: sans-serif;
   }
 }
 
